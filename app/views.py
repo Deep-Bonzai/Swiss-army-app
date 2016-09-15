@@ -2,7 +2,7 @@ from flask import render_template, request
 from collections import Counter
 
 from app import app
-from app.forms import WordCount
+from app.forms import WordCount, CalculatorForm
 from app.good_file import GoodFile
 
 
@@ -35,7 +35,7 @@ def times_table():
 
 @app.route("/calculator", methods=["GET", "POST"])
 def calculator():
-	#calculator_form = TimesTable(request.form)
+	calculator_form = CalculatorForm(request.form)
 
 
-	return render_template("calculator.html")
+	return render_template("calculator.html", calculator_form=calculator_form)
