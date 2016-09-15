@@ -4,7 +4,7 @@ from collections import Counter
 from app import app
 from app.forms import WordCount
 from app.good_file import GoodFile
-from app.times_table import MultiClass
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -29,6 +29,6 @@ def word_counter():
 @app.route("/times_table", methods=["GET", "POST"])
 def times_table():
 	#times_table_form = TimesTable(request.form)
-	multi_class = MultiClass()
 
-	return render_template("times_table.html", multi_class=multi_class)
+
+	return render_template("times_table.html")

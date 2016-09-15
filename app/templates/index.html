@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Welcome</h1>
+    <h2>The One Swiss</h2>
+    <hr>
+    <ul>
+        <li><a href="{{ url_for('word_counter') }}">Word Counter (and more)</a> </li>
+        <li><a href="{{ url_for('times_table')}} ">Times Table</a></li>
+
+    </ul>
     <a href="{{ url_for('word_counter') }}">Count Words</a>
 
 {% endblock %}
