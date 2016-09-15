@@ -32,3 +32,10 @@ def times_table():
 
 
 	return render_template("times_table.html")
+
+@app.route("/calculator", methods=["GET", "POST"])
+def calculator():
+	#calculator_form = TimesTable(request.form)
+
+
+	return render_template("calculator.html")
