@@ -1,23 +1,29 @@
-<div class="container">
-    <h2>Multiplication Table</h2>
-    <hr>
-    <div class="row">
-        <div class="col-md-12">
-            <table>
-                <tr>
-                    {% for x in range(1, 13) %}
-                        {% endfor %}
-                    <td>
-                        {% for y in range(1, 13) %}
-                    </td>
-                </tr>
-                <tr>&nbsp;
-                    <td>{% for x in range(1, 13) %}</td>
-                        <td>{{ x * y }}&nbsp;</td>
-                    <td>{% endfor %}</td>
-                    {% endfor %}        
-                </tr>
-            </table>
-        </div>
+
+<h2>Multiplication Table</h2>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+     		<thead>
+     			<tr><th>*</th>
+     				{% for x in range(1, 13) %}
+	                	<th>{{x}}</th>
+	                {% endfor %}
+     			</tr>
+     		</thead>
+     		<tbody>       
+				{% for y in range(1, 13) %}
+	        	    <tr>&nbsp;	                
+	                	<th>{{y}}</th>
+	                	{% for x in range(1, 13) %}
+		                	<td>
+		                   		{{ x * y }}&nbsp;
+		                	</td>
+		                {% endfor %}	                    	 
+	            	</tr>
+				{% endfor %} 
+	        </tbody> 
+        </table>
     </div>
 </div>
+
