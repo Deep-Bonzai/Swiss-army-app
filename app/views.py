@@ -4,6 +4,7 @@ from collections import Counter
 from app import app
 from app.forms import WordCount, CalculatorForm
 from app.good_file import GoodFile
+from app.calculator import Calculator
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -36,6 +37,11 @@ def times_table():
 @app.route("/calculator", methods=["GET", "POST"])
 def calculator():
 	calculator_form = CalculatorForm(request.form)
+	math_magic = Calculator()
+
+	number1 = calculator_form.number1
+	number2 = calculator_form.number2
+	add_magic = math_magic.addition(number1, number2)
 
 
-	return render_template("calculator.html", calculator_form=calculator_form)
+	return render_template("calculator.html", calculator_form=calculator_form, math_magic=math_magic, add_magic=add_magic)

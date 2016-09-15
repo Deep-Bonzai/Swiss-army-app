@@ -6,37 +6,45 @@
 			</div>
 		{% endfor %}
 	{% endif %}
-	<div 
-		{% if calculator_form.number1.errors %}
-			class="form-group has-error"
-		{% else%}
-			class="form-group"
-		{% endif %}
-		{% if calculator_form.number2.errors %}
-			class="form-group has-error"
-		{% else%}
-			class="form-group"
-		{% endif %}
-	>
-		{{ calculator_form.number1.label }}
-		{{ calculator_form.number1(class="form-control", placeholder="Enter First Number") }}
-	</div>
-	<div class="form-group">
-		{{ calculator_form.number2.label }}
-		{{ calculator_form.number2(class="form-control", placeholder="Enter Second Number") }}
-	</div>
-	<div class="form-group">
-		<div class="row">
-			<div class="col-lg-12 col-sm-6 ">
-				{% for subfield in calculator_form.operator %}
-					<div class="radio radio-pad">
-						{{ subfield}}
-						<br>
-						{{ subfield.label  }}
-					</div>
-				{% endfor %}
-			</div>	
+	<div class="row calculator-rows">
+		<div 
+			{% if calculator_form.number1.errors %}
+				class="form-group has-error"
+			{% else%}
+				class="form-group"
+			{% endif %}
+			{% if calculator_form.number2.errors %}
+				class="form-group has-error"
+			{% else%}
+				class="form-group"
+			{% endif %}
+		>
+			{{ calculator_form.number1.label }}
+			{{ calculator_form.number1(class="form-control", placeholder="Enter First Number") }}
 		</div>
 	</div>
-	<button type="submit" class="btn btn-primary">Run Calculation</button>
+	<div class="row calculator-rows">
+		<div class="form-group">
+			{{ calculator_form.number2.label }}
+			{{ calculator_form.number2(class="form-control", placeholder="Enter Second Number") }}
+		</div>
+	</div>
+	<div class="row calculator-rows">
+
+		<div class="form-group">
+	
+			{% for subfield in calculator_form.operator %}
+				<div class="radio radio-pad">
+					{{ subfield}}
+					<br>
+					{{ subfield.label  }}
+				</div>
+			{% endfor %}
+		</div>	
+
+	</div>
+	<div class="row calculator-rows">
+		<button type="submit" class="btn btn-primary">Run Calculation</button>
+	</div>
+
 </form>

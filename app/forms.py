@@ -8,8 +8,8 @@ class WordCount(Form):
 #	row = IntegerField("Enter number of rows.", validators=[validators.DataRequired()])
 
 class CalculatorForm(Form):
-	number1 = StringField("Enter first number", validators=[validators.DataRequired()])
-	number2 = StringField("Enter second number", validators=[validators.DataRequired()])
+	number1 = IntegerField("Enter first number", validators=[validators.DataRequired()])
+	number2 = IntegerField("Enter second number", validators=[validators.DataRequired()])
 	operator = RadioField("Operators",
 		default = "+ Add",
 		choices = [
