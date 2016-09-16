@@ -47,8 +47,15 @@ def calculator():
 
 	return render_template("calculator.html",calculator_form=calculator_form,math_magic=math_magic)
 
-@app.route("/rando")
+@app.route("/rando", methods=["GET", "POST"])
 def rando():
 	rando = RandoUserAPI()
 
+	title, first, last, picture, email, cell, gender = rando.generate_rando()
+
 	return render_template("rando_user.html", rando=rando)
+
+
+
+
+
