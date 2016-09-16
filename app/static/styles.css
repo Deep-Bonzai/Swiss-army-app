@@ -5,3 +5,11 @@ body {
 .calculator-rows {
 	margin-left: 70px;
 }
+
+.blog-images img {
+	width: 300px;
+}
+
+.blog-images {
+	text-align: center;
+}

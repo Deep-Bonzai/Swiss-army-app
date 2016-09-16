@@ -39,9 +39,9 @@ def calculator():
 	calculator_form = CalculatorForm(request.form)
 	math_magic = Calculator()
 
-	number1 = calculator_form.number1
-	number2 = calculator_form.number2
-	add_magic = math_magic.addition(number1, number2)
+	number1 = calculator_form.number1.data
+	number2 = calculator_form.number2.data
+	add_magic = math_magic.addition(number1, number2, operator)
 
 
 	return render_template("calculator.html", calculator_form=calculator_form, math_magic=math_magic, add_magic=add_magic)
