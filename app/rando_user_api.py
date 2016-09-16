@@ -20,15 +20,19 @@ class RandoUserAPI():
 		self.cell = cell
 		self.gender = gender
 
-	
+	def get_payload(self, **kwargs):
+		payload = {}
+
+		for key, value in kwargs.items():
+			payload[key] = value
+
+		return payload
 
 	def generate_rando(self):
-		url = "{}{}".format(self.base_url, "/results=10")
-		r = requests.get(url)
+		payload = self.get_payload()
+		url = "{}".format(self.base_url)
+		r = requests.get(url, params=payload)
 		result = r.json()
-
-
-
 
 		self.title = result["results"][0]["name"]["title"]
 		self.first = result["results"][0]["name"]["first"]
