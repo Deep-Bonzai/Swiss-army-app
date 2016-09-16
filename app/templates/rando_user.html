@@ -3,10 +3,10 @@
 {% block content %}
     <h2>Random People</h2>
     <hr>
-
-    {{ rando.picture }}
+    <img src="{{ rando.picture }}">
+    
     <br>
-    Name: {{ rando.title, rando.first, rando.last }}
+    Name: {{ rando.title}} {{rando.first}} {{rando.last }}
     <br>
     Email: {{ rando.email }}
     <br>
