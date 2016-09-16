@@ -11,7 +11,7 @@ class RandoUserAPI():
 		gender="",
 
 		):
-		self.base_url = "http://api.randomuser.me"
+		self.base_url = "https://randomuser.me/api/"
 		self.title = title
 		self.first = first
 		self.last = last
