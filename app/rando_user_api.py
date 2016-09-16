@@ -1,6 +1,6 @@
 import requests
 
-class RandoUserAPI():
+class Randomly():
 	def __init__(self, 
 		title="",
 		first="", 
@@ -11,7 +11,7 @@ class RandoUserAPI():
 		gender="",
 
 		):
-		self.base_url = "https://randomuser.me/api/"
+		
 		self.title = title
 		self.first = first
 		self.last = last
@@ -20,26 +20,31 @@ class RandoUserAPI():
 		self.cell = cell
 		self.gender = gender
 
-	def get_payload(self, **kwargs):
-		payload = {}
+class RandoUserAPI():
+	def __init__(self):
+		self.base_url = "https://randomuser.me/api/"
 
-		for key, value in kwargs.items():
-			payload[key] = value
-
-		return payload
 
 	def generate_rando(self):
-		payload = self.get_payload()
+
+
 		url = "{}{}".format(self.base_url, "?results=10")
-		r = requests.get(url, params=payload)
+		r = requests.get(url)
 		result = r.json()
 
-		self.title = result["results"][0]["name"]["title"]
-		self.first = result["results"][0]["name"]["first"]
-		self.last = result["results"][0]["name"]["last"]
-		self.picture = result["results"][0]["picture"]["thumbnail"]
-		self.email = result["results"][0]["email"]
-		self.cell = result["results"][0]["cell"]
-		self.gender = result["results"][0]["gender"]
-			
-		return self.title, self.first, self.last, self.picture, self.email, self.cell, self.gender
+		rando_list = []
+
+		for index, value in enumerate(result["results"]):
+			bootilicious = Randomly(
+				title = result["results"][index]["name"]["title"],
+				first = result["results"][index]["name"]["first"],
+				last = result["results"][index]["name"]["last"],
+				picture = result["results"][index]["picture"]["thumbnail"],
+				email = result["results"][index]["email"],
+				cell = result["results"][index]["cell"],
+				gender = result["results"][index]["gender"],
+			)
+
+			rando_list.append(bootilicious)
+
+		return rando_list

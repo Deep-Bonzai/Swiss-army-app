@@ -51,9 +51,10 @@ def calculator():
 def rando():
 	rando = RandoUserAPI()
 
-	title, first, last, picture, email, cell, gender = rando.generate_rando()
+	#title, first, last, picture, email, cell, gender = rando.generate_rando()
+	rando_list = rando.generate_rando()
 
-	return render_template("rando_user.html", rando=rando)
+	return render_template("rando_user.html", rando=rando, rando_list=rando_list)
 
 
 
