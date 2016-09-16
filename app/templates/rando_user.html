@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Random People</h2>
+    <hr>
+
+    {{ rando.picture }}
+    <br>
+    Name: {{ rando.title, rando.first, rando.last }}
+    <br>
+    Email: {{ rando.email }}
+    <br>
+    Cell Phone: {{ rando.cell }}
+    <br>
+    Gender: {{ rando.gender }}
+
+{% endblock %}
