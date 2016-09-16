@@ -5,6 +5,7 @@ from app import app
 from app.forms import WordCount, CalculatorForm
 from app.good_file import GoodFile
 from app.calculator import Calculator
+from app.rando_user_api import RandoUserAPI
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -45,3 +46,9 @@ def calculator():
 
 
 	return render_template("calculator.html", calculator_form=calculator_form, math_magic=math_magic, add_magic=add_magic)
+
+@app.route("/rando")
+def rando():
+	rando = RandoUserAPI()
+
+	return render_template("rando_user.html", rando=rando)
