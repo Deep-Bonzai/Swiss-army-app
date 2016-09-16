@@ -20,6 +20,7 @@ class RandoUserAPI():
 		self.cell = cell
 		self.gender = gender
 
+	
 
 	def generate_rando(self):
 		url = "{}{}".format(self.base_url, "/results=10")
