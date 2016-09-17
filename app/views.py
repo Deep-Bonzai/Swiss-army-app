@@ -44,6 +44,9 @@ def calculator():
 		number1 = calculator_form.number1.data
 		number2 = calculator_form.number2.data
 		add_magic = math_magic.addition(number1, number2)
+		subtract_magic = math_magic.subtraction(number1, number2)
+		multiply_magic = math_magic.multiplication(number1, number2)
+		divide_magic = math_magic.division(number1, number2)
 
 	return render_template("calculator.html",calculator_form=calculator_form,math_magic=math_magic)
 

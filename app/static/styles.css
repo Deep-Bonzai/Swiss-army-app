@@ -6,6 +6,14 @@ body {
 	margin-left: 70px;
 }
 
+.calculator-results {
+	margin-left: 70px;
+	padding-top: 20px;
+	border: 2px solid yellow;
+	vertical-align: middle;
+	text-align: center;
+}
+
 .blog-images img {
 	width: 300px;
 }
@@ -17,3 +25,4 @@ body {
 .multiplication-table table th td {
 	border: 1px solid black;
 }
+
