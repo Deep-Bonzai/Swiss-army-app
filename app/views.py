@@ -65,6 +65,9 @@ def repos():
 	repos = UserRepo()
 	repo_form = RepoForm(request.form)
 
+	if request.method == "POST":
+		username = repo_form.username.data
+
 	return render_template("user_repo.html", repos=repos, repo_form=repo_form)
 
 
