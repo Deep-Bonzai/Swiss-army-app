@@ -1,17 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Random People</h2>
-    <hr>
-    <img src="{{ rando.picture }}">
-    
-    <br>
-    Name: {{ rando.title}} {{rando.first}} {{rando.last }}
-    <br>
-    Email: {{ rando.email }}
-    <br>
-    Cell Phone: {{ rando.cell }}
-    <br>
-    Gender: {{ rando.gender }}
+
+    <!--{% for person in rando.rando_list %}-->
+        <div class="thumbnail">
+            <div class="caption">
+                <h2>
+                    <img src="{{ rando.picture }}">
+                </h2>
+                <table class="table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>{{ rando_list.title}} {{rando_list.first}} {{rando_list.last }}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{rando_list.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Cell Phone</td>
+                            <td>{{rando_list.cell}}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>{{rando_list.gender}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <!--{% endfor %}-->
 
 {% endblock %}

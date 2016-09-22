@@ -14,3 +14,6 @@ class CalculatorForm(Form):
 			("* Multiply", "* Multiply"),
 			("/ Divide", "/ Divide")
 		])
+
+class RepoForm(Form):
+	username = StringField("Enter the Username of Interest", validators=[validators.DataRequired()])

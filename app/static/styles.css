@@ -22,7 +22,10 @@ body {
 	text-align: center;
 }
 
-.multiplication-table table th td {
-	border: 1px solid black;
+.multiplication-table td {
+	border: 2px solid black;
+	text-align: center;
 }
+
+
 

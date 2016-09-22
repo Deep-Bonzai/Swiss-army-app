@@ -2,10 +2,11 @@ from flask import render_template, request
 from collections import Counter
 
 from app import app
-from app.forms import WordCount, CalculatorForm
+from app.forms import WordCount, CalculatorForm, RepoForm
 from app.good_file import GoodFile
 from app.calculator import Calculator
 from app.rando_user_api import RandoUserAPI
+from app.repo import UserRepo
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -59,7 +60,11 @@ def rando():
 
 	return render_template("rando_user.html", rando=rando, rando_list=rando_list)
 
+@app.route("/repos", methods=["GET", "POST"])
+def repos():
+	repos = UserRepo()
+	repo_form = RepoForm(request.form)
 
-
+	return render_template("user_repo.html", repos=repos, repo_form=repo_form)
 
 
