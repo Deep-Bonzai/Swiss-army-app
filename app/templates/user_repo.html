@@ -4,10 +4,14 @@
 	<h2>GitHub User Repositories</h2>
 	<hr>
 	{% include "includes/repo-form.html" %}
-    
-    {{repos.repo_list}}
-    {{repo_form.username.data}}
 
-    {{repos.repo_list}}
+    {% for item in repo_list %}
+
+        {{item}}<br />
+
+    {% endfor %}
+    <hr>
+
+    {{repo_form.username.data}}
 
 {% endblock %}

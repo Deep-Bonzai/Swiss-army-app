@@ -1,5 +1,6 @@
 from flask import render_template, request
 from collections import Counter
+import requests
 
 from app import app
 from app.forms import WordCount, CalculatorForm, RepoForm
@@ -62,14 +63,30 @@ def rando():
 
 @app.route("/repos", methods=["GET", "POST"])
 def repos():
-	repos = UserRepo()
 	repo_form = RepoForm(request.form)
+	reposie = UserRepo()
 
-	# if request.method == "POST":
-	username = repo_form.username.data
-	
-	repo_list = repos.get_repos(username)
+	repo_list = []
 
-	return render_template("user_repo.html", repos=repos, repo_form=repo_form, repo_list=repo_list)
+	if request.method == "POST":
+		username = repo_form.username.data
 
+		repo_list = reposie.get_repos(username)
+#	import pdb; pdb.set_trace()
+	print(repo_list)
+	return render_template("user_repo.html", reposie=reposie, repo_form=repo_form, repo_list=repo_list)
 
+#class UserRepo():
+
+#	def get_repos(self, username):
+
+#		url = "https://api.github.com/users/{}/repos".format(username)
+#		q = requests.get(url)
+#		result = q.json()
+
+#		repo_list = []
+
+#		for diction in result:
+#			repo_list.append(diction["full_name"])
+
+#		return repo_list
