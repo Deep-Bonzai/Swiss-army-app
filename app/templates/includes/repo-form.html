@@ -1,20 +1,14 @@
 <form action="" method="POST" class="form-inline">
 	{% if repo_form.errors %}
 	    {% for key, value in repo_form.errors.items() %}
-	    	<alert class="alert-danger">
-	    		{{ key.title() }}: {{value[0]}}	
-	    	</alert>
-	    {% endfor %}
+	    	<div class="alert alert-danger">
+				{{ key.title() }}: {{value[0]}}
+			</div>
+		{% endfor %}
 	
 	{% endif %}
 
-	<div 
-		{% if repo_form.errors %}
-			class="form-group has-error"
-		{% else%}
-			class="form-group"
-		{% endif %}
-	>
+	<div class="form-group">
 		{{ repo_form.username.label }}
 		{{ repo_form.username(class="form-control", placeholder="Enter Username") }}
 	</div>

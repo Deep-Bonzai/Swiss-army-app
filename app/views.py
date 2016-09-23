@@ -5,7 +5,7 @@ from app import app
 from app.forms import WordCount, CalculatorForm, RepoForm
 from app.good_file import GoodFile
 from app.calculator import Calculator
-from app.rando_user_api import RandoUserAPI
+from app.rando_user_api import RandoUserAPI, Randomly
 from app.repo import UserRepo
 
 
@@ -65,9 +65,11 @@ def repos():
 	repos = UserRepo()
 	repo_form = RepoForm(request.form)
 
-	if request.method == "POST":
-		username = repo_form.username.data
+	# if request.method == "POST":
+	username = repo_form.username.data
+	
+	repo_list = repos.get_repos(username)
 
-	return render_template("user_repo.html", repos=repos, repo_form=repo_form)
+	return render_template("user_repo.html", repos=repos, repo_form=repo_form, repo_list=repo_list)
 
 

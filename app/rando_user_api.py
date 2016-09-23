@@ -35,19 +35,20 @@ class RandoUserAPI():
 		rando_list = []
 
 		x = 9
-		while x > 0:
-			bootilicious = Randomly(
-				title = result["results"][x]["name"]["title"],
-				first = result["results"][x]["name"]["first"],
-				last = result["results"][x]["name"]["last"],
-				picture = result["results"][x]["picture"]["thumbnail"],
-				email = result["results"][x]["email"],
-				cell = result["results"][x]["cell"],
-				gender = result["results"][x]["gender"]
-			)
+		# while x > 0:
+		bootilicious = Randomly(
+			title = result["results"][0]["name"]["title"],
+			first = result["results"][0]["name"]["first"],
+			last = result["results"][0]["name"]["last"],
+			picture = result["results"][0]["picture"]["thumbnail"],
+			email = result["results"][0]["email"],
+			cell = result["results"][0]["cell"],
+			gender = result["results"][0]["gender"]
+		)
 
-			rando_list.append(bootilicious)
-
-			x -= 1
+		rando_list.append(bootilicious)
+		for i in rando_list:
+			print(i)
+			# x -= 1
 
 		return rando_list
