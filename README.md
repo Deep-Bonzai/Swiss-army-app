@@ -29,7 +29,7 @@
     $ pushd <project name> 
     $ git init
 
-+ create a new repo in GitHub; clone the *url* or *ssh link*
+* create a new repo in GitHub; clone the *url* or *ssh link*
     `$ git remote add origin <cloned url>
     // make first add/commit/push
     $ git add .
