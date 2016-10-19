@@ -22,9 +22,9 @@ a:hover, a:link {
 .calculator-results {
 	margin-left: 70px;
 	padding-top: 20px;
-	border: 2px solid yellow;
 	vertical-align: middle;
 	text-align: center;
+	background-color: white;
 }
 
 .profile-images img {

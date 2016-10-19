@@ -32,7 +32,7 @@
 	<div class="row calculator-rows">
 
 		<div class="form-group">
-	
+
 			{% for subfield in calculator_form.operator %}
 				<div class="radio radio-pad">
 					{{ subfield}}
@@ -40,11 +40,11 @@
 					{{ subfield.label }}
 				</div>
 			{% endfor %}
-		</div>	
+		</div>
 
 	</div>
 	<div class="row calculator-rows">
-		<button type="submit" class="btn btn-primary">Run Calculation</button>
+		<button type="submit" class="btn btn-warning">Run Calculation</button>
 	</div>
 
 </form>
