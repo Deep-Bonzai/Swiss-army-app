@@ -41,9 +41,9 @@ class RandoUserAPI():
 		# while x > 0:
 		for person in result['results']:
 			bootilicious = Randomly(
-				title = person["name"]["title"],
-				first = person["name"]["first"],
-				last = person["name"]["last"],
+				title = person["name"]["title"].capitalize(),
+				first = person["name"]["first"].capitalize(),
+				last = person["name"]["last"].capitalize(),
 				picture = person["picture"]["thumbnail"],
 				email = person["email"],
 				cell = person["cell"],
@@ -51,6 +51,5 @@ class RandoUserAPI():
 			)
 
 			rando_list.append(bootilicious)
-
 
 		return rando_list

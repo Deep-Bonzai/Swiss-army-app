@@ -1,5 +1,6 @@
 body {
 	padding-top: 140px;
+	background-color: #F2F2F2;
 }
 
 h1, h2 {
@@ -46,8 +47,11 @@ a:hover, a:link {
 }
 
 .panel {
-	border: 2px solid grey;
+	border: 3px solid black;
+	padding: 5px;
 }
 
-
-
+.panel-head {
+	font-weight: bolder;
+/*	background-color: grey;*/
+}

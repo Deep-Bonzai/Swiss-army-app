@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="row">
     {% for item in rando_list %}
-        <div class="panel">
+        <div class="panel col-md-5">
             <div class="panel-head">
-                Name:  {{ item.title}} {{item.first}} {{item.last }}
+                {{item.title}} {{item.first}} {{item.last }}
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -25,10 +25,10 @@
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
+        <div class="col-md-1"></div>
     {% endfor %}
-    
 
-    
+</div>
 
 {% endblock %}
