@@ -30,11 +30,11 @@
     $ git init
 
 + create a new repo in GitHub; clone the *url* or *ssh link*
-    $ git remote add origin <cloned url>
+    `$ git remote add origin <cloned url>
     // make first add/commit/push
     $ git add .
     $ git commit -m "initial commit"
-    $ git push origin master
+    $ git push origin master`
 
 ###2. set up virtual environment
 
