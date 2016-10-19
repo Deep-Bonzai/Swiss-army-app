@@ -14,12 +14,13 @@ body {
 	text-align: center;
 }
 
-.blog-images img {
-	width: 300px;
+.profile-images img {
+	width: 80px;
+	border-radius: 5px;
 }
 
-.blog-images {
-	text-align: center;
+.splash-image img {
+	width: 300px;
 }
 
 .multiplication-table td {

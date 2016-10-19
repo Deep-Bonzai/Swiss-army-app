@@ -37,7 +37,7 @@
     $ git push origin master`
 
 ###2. set up virtual environment
-
++ `mkvirtualenv -p python3 swiss-army-app`
 
 ###3. requirements.txt
 
