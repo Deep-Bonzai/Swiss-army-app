@@ -17,7 +17,7 @@ class Calculator():
 
 	def division(self, number1, number2):
 		if number2 == 0:
-			self.divide_magic = 0
+			self.divide_magic = "booty"
 		else:
 			self.divide_magic = number1 / number2
 		return self.divide_magic
