@@ -2,6 +2,18 @@ body {
 	padding-top: 70px;
 }
 
+h1, h2 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+	font-family: 'Bungee Inline', cursive;
+}
+
+a:hover, a:link {
+	text-decoration: none;
+}
+
 .calculator-rows {
 	margin-left: 70px;
 }
@@ -16,6 +28,7 @@ body {
 
 .profile-images img {
 	width: 80px;
+	height: 90px;
 	border-radius: 5px;
 }
 
