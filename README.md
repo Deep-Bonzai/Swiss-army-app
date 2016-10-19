@@ -50,3 +50,22 @@
 
 1. `$ python run.py`
 
+
+
+####unused calculator-form.html
+
+                    {% if subfield == "+ Add" %}
+                        <i class="fa fa-plus"></i>
+                    {% endif %}
+
+                    {% if subfield == "- Subtract" %}
+                        <i class="fa fa-minus"></i>
+                    {% endif %}
+
+                    {% if subfield == "* Multiply" %}
+                        <i class="fa fa-times"></i>
+                    {% endif %}
+
+                    {% if subfield.value == "/ Divide" %}
+                        <i class="fa fa-low-vision"></i>
+                    {% endif %}

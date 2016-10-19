@@ -15,10 +15,13 @@
 			{% for subfield in calculator_form.operator %}
 				<div class="radio radio-pad col-md-3">
 					{{ subfield }}
-					<br>
-					{{ subfield.label }}
+					{{ subfield.label(data-target="#you-suck") }}
 				</div>
 			{% endfor %}
+
+			<div id="you-suck">
+				
+			</div>
 		</div>
 
 		<div class="col-md-3">
