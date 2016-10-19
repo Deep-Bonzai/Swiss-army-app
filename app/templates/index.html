@@ -3,14 +3,14 @@
 {% block content %}
 <div class="row row-images">
 
-    <h2 class="col-md-6">Super Swiss</h2>
+    <h2 class="col-md-10">Super Swiss</h2>
 
-    <div class="col-md-3 profile-images">
+    <div class="col-md-1 profile-images">
         <a href="https://billbunkum.github.io/">
             <img src="http://2.bp.blogspot.com/-Ek5WBDVFM1M/TmP5nGwoeAI/AAAAAAAAAKk/F53lL6kBpVw/s320/3menPlayPai_jian2010.jpg" title="Bill Bunkum Profile">
         </a>
     </div>
-    <div class="col-md-3 profile-images">
+    <div class="col-md-1 profile-images">
         <a href="http://kellyinnovation.com/">
             <img src="http://kellyinnovation.com/photos/peacockNecklace.jpg" title="Kelly Wright Profile">
         </a>
@@ -22,6 +22,39 @@
 
     <div class="col-md-4 splash-image">
         <img src="http://s-media-cache-ak0.pinimg.com/736x/94/ab/ce/94abce1e7b63e752b045a55875a97769.jpg">
+    </div>
+    <div class="col-md-8">
+        <h3>Welcome to the Swiss Army website.</h3>
+        <div class="row">
+            <h3>
+                <a href="{{ url_for('word_counter') }}">Count Words</a>
+            </h3>
+            <p>Enter text and monitor word count, letter count, and most frequent of each in real time.</p>
+        </div>
+        <div class="row">
+            <h3>
+                <a href="{{ url_for('times_table') }}">Multiplication Table</a>
+            </h3>  
+            <p>View multiplication tables of chosen dimensions</p> 
+        </div>
+        <div class="row">
+            <h3>
+                <a href="{{ url_for('calculator') }}">Calculator</a>
+            </h3>
+            <p>Simple calculator.</p> 
+        </div>
+        <div class="row">
+            <h3>
+                <a href="{{ url_for('rando') }}">Random User</a>
+            </h3>  
+            <p>Generate random user information.</p>
+        </div>
+        <div class="row">
+            <h3>
+                <a href="{{ url_for('repos') }}">GitHub User Repo</a>
+            </h3>
+            <p>View GitHub repositories for a user.</p>    
+        </div>
     </div>
 
 </div>
