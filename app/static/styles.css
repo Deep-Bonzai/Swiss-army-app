@@ -1,5 +1,5 @@
 body {
-	padding-top: 140px;
+	padding: 140px 10px;
 	background-color: #F2F2F2;
 }
 
@@ -15,16 +15,16 @@ a:hover, a:link {
 	text-decoration: none;
 }
 
-.calculator-rows {
-	margin-left: 70px;
-}
-
 .calculator-results {
-	margin-left: 70px;
-	padding-top: 20px;
 	vertical-align: middle;
 	text-align: center;
-	background-color: white;
+	font-size: 150px;
+	color: #F2F2F2;
+	background-color: #272727;
+}
+
+.booty-calculation {
+
 }
 
 .profile-images img {

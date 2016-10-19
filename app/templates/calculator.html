@@ -3,9 +3,7 @@
 {% block content %}
 	<h1>Calculator</h1>
 	<hr>
-	{% include "includes/calculator-form.html" %}
-	<br>
-	<div class="row calculator-results">
+	<div class="jumbotron calculator-results">
 		{% if calculator_form.operator.data == "+ Add" %}
 			{{ math_magic.add_magic }}
 		{% endif %}
@@ -19,5 +17,7 @@
 			{{ math_magic.divide_magic }}
 		{% endif %}
 	</div>
+	{% include "includes/calculator-form.html" %}
+	<br />
 
 {% endblock %}
