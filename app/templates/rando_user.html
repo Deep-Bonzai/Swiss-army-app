@@ -2,38 +2,33 @@
 
 {% block content %}
 
-    
-        <div class="thumbnail">
-            <div class="caption">
-                <h2>
-                    <img src="{{ rando.picture }}">
-                </h2>
-                <table class="table-striped">
-                    <tbody>
-                    {% for item in rando_list %}
-                        
-                    
-                        <tr>
-                            <td>Name</td>
-                            <td>{{ rando_list.title}} {{rando_list.first}} {{rando_list.last }}</td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td>{{rando_list.email}}</td>
-                        </tr>
-                        <tr>
-                            <td>Cell Phone</td>
-                            <td>{{rando_list.cell}}</td>
-                        </tr>
-                        <tr>
-                            <td>Gender</td>
-                            <td>{{rando_list.gender}}</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+    {% for item in rando_list %}
+        <div class="panel">
+            <div class="panel-head">
+                Name:  {{ item.title}} {{item.first}} {{item.last }}
             </div>
-        </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="{{ item.picture }}">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            Email:  {{item.email}}
+                        </div>
+                        <div class="row">
+                            Cell Phone:  {{item.cell}}
+                        </div>
+                        <div class="row">    
+                            Gender:  {{item.gender}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    {% endfor %}
+    
+
     
 
 {% endblock %}

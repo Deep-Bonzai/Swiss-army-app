@@ -1,5 +1,6 @@
 import requests
 
+
 class Randomly():
 	def __init__(self, 
 		title="",
@@ -32,23 +33,24 @@ class RandoUserAPI():
 		r = requests.get(url)
 		result = r.json()
 
+
+
 		rando_list = []
 
 		x = 9
 		# while x > 0:
-		bootilicious = Randomly(
-			title = result["results"][0]["name"]["title"],
-			first = result["results"][0]["name"]["first"],
-			last = result["results"][0]["name"]["last"],
-			picture = result["results"][0]["picture"]["thumbnail"],
-			email = result["results"][0]["email"],
-			cell = result["results"][0]["cell"],
-			gender = result["results"][0]["gender"]
-		)
+		for person in result['results']:
+			bootilicious = Randomly(
+				title = person["name"]["title"],
+				first = person["name"]["first"],
+				last = person["name"]["last"],
+				picture = person["picture"]["thumbnail"],
+				email = person["email"],
+				cell = person["cell"],
+				gender = person["gender"]
+			)
 
-		rando_list.append(bootilicious)
-		for i in rando_list:
-			print(i)
-			# x -= 1
+			rando_list.append(bootilicious)
+
 
 		return rando_list

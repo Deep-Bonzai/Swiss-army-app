@@ -45,5 +45,9 @@ a:hover, a:link {
 	margin: 10px;
 }
 
+.panel {
+	border: 2px solid grey;
+}
+
 
 
