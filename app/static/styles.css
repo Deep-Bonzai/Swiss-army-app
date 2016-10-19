@@ -1,5 +1,5 @@
 body {
-	padding-top: 70px;
+	padding-top: 140px;
 }
 
 h1, h2 {
@@ -39,6 +39,10 @@ a:hover, a:link {
 .multiplication-table td {
 	border: 2px solid black;
 	text-align: center;
+}
+
+.form-spacing {
+	margin: 10px;
 }
 
 

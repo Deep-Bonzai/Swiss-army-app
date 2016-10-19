@@ -13,8 +13,11 @@
 			class="form-group"
 		{% endif %}
 	>
-		{{ word_count.count.label }}
-		{{ word_count.count(class="form-control", placeholder="Enter Sentences") }}
-	</div>
+		<div class="form-spacing">
+			{{ word_count.count.label }}
+		</div>
+		{{ word_count.count(class="form-control", placeholder="Text") }}
+	
 	<button type="submit" class="btn btn-warning">Count Words!</button>
+	</div>
 </form>
