@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form action="" method="POST" class="form-inline">
 	{% if calculator_form.errors %}
 		{% for key, value in calculator_form.errors.items() %}
 			<div class="alert alert-danger">
@@ -6,31 +6,47 @@
 			</div>
 		{% endfor %}
 	{% endif %}
-	<div class="row">
-		<div class="col-md-3 booty-calculation">
-			{{ calculator_form.number1(class="form-control", placeholder="Enter First Number") }}
-		</div>
+	<div 
+		{% if calculator_form.number1.errors %}
+			class="form-group has-error"
+		{% else %}
+			class="form-group"
+		{% endif %}
 
-		<div class="col-md-6">
-			{% for subfield in calculator_form.operator %}
-				<div class="radio radio-pad col-md-3">
-					{{ subfield }}
-					{{ subfield.label(data-target="#you-suck") }}
-				</div>
-			{% endfor %}
+		{% if calculator_form.number2.errors %}
+			class="form-group has-error"
+		{% else%}
+			class="form-group"
+		{% endif %}
+	>
 
-			<div id="you-suck">
-				
+<!-- (data-target="#you-suck")  -->
+
+		<div class="row">
+			<div class="col-md-4 booty-calculation">
+				{{ calculator_form.number1(class="form-control", placeholder="Enter First Number") }}
 			</div>
-		</div>
 
-		<div class="col-md-3">
-			{{ calculator_form.number2(class="form-control", placeholder="Enter Second Number") }}
-		</div>
-	</div> <!-- END row -->
+			<!-- <div class="col-md-1"></div> -->
+			<div class="col-md-4">
+				{% for subfield in calculator_form.operator %}
+					<div class="radio radio-pad col-md-3">
+						{{ subfield }}
+						{{ subfield.label }}
+					</div>
+				{% endfor %}
+			</div>
 
-	<div class="row calculator-rows">
-		<button type="submit" class="btn btn-lg btn-warning">Run Calculation</button>
-	</div>
-
+			<div class="col-md-4">
+				{{ calculator_form.number2(class="form-control", placeholder="Enter Second Number") }}
+			</div>
+		</div> <!-- END row -->
+		<p>
+			<div class="row calculator-rows">
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-lg btn-warning">Run Calculation</button>
+				</div>
+			</div>
+		</p>
+	</div> <!-- has-errors div -->
 </form>
