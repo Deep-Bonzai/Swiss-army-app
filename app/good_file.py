@@ -8,7 +8,7 @@ class GoodFile():
 		self.phrase_length = 0
 		self.char_length = 0
 		self.max_key = ""
-		self.frequent_letter = ""		
+		self.frequent_letter = ""
 
 	def number_words(self, word_count):
 	#finding number of words

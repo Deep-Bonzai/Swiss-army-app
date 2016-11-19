@@ -50,7 +50,7 @@ def calculator():
 		multiply_magic = math_magic.multiplication(number1, number2)
 		divide_magic = math_magic.division(number1, number2)
 
-	return render_template("calculator.html",calculator_form=calculator_form,math_magic=math_magic)
+	return render_template("calculator.html", calculator_form=calculator_form, math_magic=math_magic)
 
 @app.route("/rando", methods=["GET", "POST"])
 def rando():
