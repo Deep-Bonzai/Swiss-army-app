@@ -6,15 +6,15 @@ class WordCount(Form):
 class CalculatorForm(Form):
 	number1 = DecimalField("", default=0.0, validators=[validators.DataRequired()])
 	number2 = DecimalField("", default=0.0, validators=[validators.DataRequired()])
-	operator = RadioField("Operators",
+	operator = RadioField("Operators", 
 		choices = [
-			("+ Add", "+"),
-			("- Subtract", "-"),
-			("* Multiply", "*"),
+			("+ Add", "+"), 
+			("- Subtract", "-"), 
+			("* Multiply", "*"), 
 			("/ Divide", "/"),
-		],
+		], 
 		default = "+ Add",
-		) #the second one is what appears
+	) #the second one is what appears
 
 class RepoForm(Form):
 	username = StringField("Enter the Username of Interest", validators=[validators.DataRequired()])
