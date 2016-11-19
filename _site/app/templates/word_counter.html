@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>The One Counter to Rule them All</h1>
+    <hr>
+    {% include "includes/counter-form.html" %}
+    <div class="form-spacing"> 
+        Word Count: {{ good_stuff.phrase_length }}
+        <br>
+        Character count: {{ good_stuff.char_length }}
+        <br>
+        Most Frequent Word: {{ good_stuff.max_key }}
+        <br>
+        Most Frequent Letter: {{ good_stuff.frequent_letter }}
+    </div>  
+
+{% endblock %}

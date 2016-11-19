@@ -1,0 +1,57 @@
+body {
+	padding: 140px 10px;
+	background-color: #F2F2F2;
+}
+
+h1, h2 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+	font-family: 'Bungee Inline', cursive;
+}
+
+a:hover, a:link {
+	text-decoration: none;
+}
+
+.calculator-results {
+	vertical-align: middle;
+	text-align: center;
+	font-size: 150px;
+	color: #F2F2F2;
+	background-color: #272727;
+}
+
+.booty-calculation {
+
+}
+
+.profile-images img {
+	width: 80px;
+	height: 90px;
+	border-radius: 5px;
+}
+
+.splash-image img {
+	width: 350px;
+}
+
+.multiplication-table td {
+	border: 2px solid black;
+	text-align: center;
+}
+
+.form-spacing {
+	margin: 10px;
+}
+
+.panel {
+	border: 3px solid black;
+	padding: 5px;
+}
+
+.panel-head {
+	font-weight: bolder;
+/*	background-color: grey;*/
+}

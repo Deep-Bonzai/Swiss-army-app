@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>GitHub User Repositories</h1>
+	<hr>
+	{% include "includes/repo-form.html" %}
+
+    {% for item in repo_list %}
+
+        {{item}}<br />
+
+    {% endfor %}
+    <hr>
+
+    {{repo_form.username.data}}
+
+{% endblock %}

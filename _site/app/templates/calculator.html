@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Calculator</h1>
+	<hr>
+	<div class="jumbotron calculator-results">
+		{% if calculator_form.operator.data == "+ Add" %}
+			{{ math_magic.add_magic }}
+		{% endif %}
+		{% if calculator_form.operator.data == "- Subtract" %}
+			{{ math_magic.subtract_magic }}
+		{% endif %}
+		{% if calculator_form.operator.data == "* Multiply" %}
+			{{ math_magic.multiply_magic }}
+		{% endif %}
+		{% if calculator_form.operator.data == "/ Divide" %}
+			{{ math_magic.divide_magic }}
+		{% endif %}
+	</div>
+	{% include "includes/calculator-form.html" %}
+	<br />
+
+{% endblock %}

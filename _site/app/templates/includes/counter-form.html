@@ -1,0 +1,23 @@
+<form action="" method="POST" class="form-inline">
+	{% if word_count.errors %}
+		{% for key, value in word_count.errors.items() %}
+			<div class="alert alert-danger">
+				{{ key.title() }}: {{value[0]}}
+			</div>
+		{% endfor %}
+	{% endif %}
+	<div 
+		{% if word_count.count.errors %}
+			class="form-group has-error"
+		{% else%}
+			class="form-group"
+		{% endif %}
+	>
+		<div class="form-spacing">
+			{{ word_count.count.label }}
+		</div>
+		{{ word_count.count(class="form-control", placeholder="Text") }}
+	
+	<button type="submit" class="btn btn-warning">Count Words!</button>
+	</div>
+</form>

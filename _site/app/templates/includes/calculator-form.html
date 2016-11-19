@@ -1,0 +1,36 @@
+<form action="" method="POST">
+	{% if calculator_form.errors %}
+		{% for key, value in calculator_form.errors.items() %}
+			<div class="alert alert-danger">
+				{{ key.title() }}: {{value[0]}}
+			</div>
+		{% endfor %}
+	{% endif %}
+	<div class="row">
+		<div class="col-md-3 booty-calculation">
+			{{ calculator_form.number1(class="form-control", placeholder="Enter First Number") }}
+		</div>
+
+		<div class="col-md-6">
+			{% for subfield in calculator_form.operator %}
+				<div class="radio radio-pad col-md-3">
+					{{ subfield }}
+					{{ subfield.label(data-target="#you-suck") }}
+				</div>
+			{% endfor %}
+
+			<div id="you-suck">
+				
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			{{ calculator_form.number2(class="form-control", placeholder="Enter Second Number") }}
+		</div>
+	</div> <!-- END row -->
+
+	<div class="row calculator-rows">
+		<button type="submit" class="btn btn-lg btn-warning">Run Calculation</button>
+	</div>
+
+</form>
